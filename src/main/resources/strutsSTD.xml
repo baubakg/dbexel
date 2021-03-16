@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DBEXEL is a Database Backed & Web-Based Worksheet and chart management 
+	program. It has been influenced by Excel. For questions or suggestions please 
+	contact the developper at ( Development@Gandomi.com ) Copyright (C) 2011 
+	Baubak Gandomi This file is part of the application DBEXEL DBEXEL is free 
+	software: you can redistribute it and/or modify it under the terms of the 
+	GNU General Public License as published by the Free Software Foundation, 
+	either version 3 of the License, or (at your option) any later version. DBEXEL 
+	is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+	PURPOSE. See the GNU General Public License for more details. You should 
+	have received a copy of the GNU General Public License along with this program. 
+	If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="DBExel_STD" extends="struts-default">
+		<action name="Start">
+			<result>WEB-INF/pages/welcome.jsp</result>
+		</action>
+
+		
+		<!-- WorkSheets -->
+		<action name="CreateFreeWorkSheet">
+			<result>WEB-INF/pages/createWSFromPhraseStep1.jsp</result>
+		</action>
+		<action name="InitWorkSheetCreationAction" class="dbexel.presentation.actions.InitWorkSheet"	method="prepareNewWorkSheet">
+			<result name="input">WEB-INF/pages/createWSFromPhraseStep1.jsp</result>
+			<result name="success">WEB-INF/pages/createWSFromPhraseStep2.jsp</result>
+		</action>
+		<action name="StoreInitWorkSheetAction" class="dbexel.presentation.actions.InitWorkSheet"
+			method="performCellActions">
+			<result name="input">WEB-INF/pages/createWSFromPhraseStep2.jsp</result>
+			<result name="success" type="redirectAction">Start</result>
+		</action>
+		
+		
+		<action name="ShowWorkSheets" class="dbexel.presentation.actions.WorkSheetAction"
+			method="fetchWorkSheets">
+			<result name="success">/WEB-INF/pages/showWorkSheets.jsp</result>
+		</action>
+ 		<action name="ShowDistinctWorkSheet"
+			class="dbexel.presentation.actions.DistinctWorkSheetAction" method="showWorkSheet">
+			<result name="success">/WEB-INF/pages/showWorkSheetDetails.jsp</result>
+		</action>
+		<action name="EditWorkSheet"
+			class="dbexel.presentation.actions.DistinctWorkSheetAction" method="editWorkSheet">
+			<result name="input">/WEB-INF/pages/editWorkSheet.jsp</result>
+			<result name="success">/WEB-INF/pages/showWorkSheetDetails.jsp</result>
+		</action>		
+		<action name="DeleteWorkSheet"
+			class="dbexel.presentation.actions.DistinctWorkSheetAction" method="deleteWorkSheet">
+			<result name="success">/WEB-INF/pages/welcome.jsp</result>
+		</action>
+
+		<!-- Entries -->
+		<action name="AddNewEntryToWorkSheet"
+			class="dbexel.presentation.actions.WorkSheetEntriesAction" method="create">
+			<interceptor-ref name="paramsPrepareParamsStack"/>
+			<result name="input">/WEB-INF/pages/addWorkSheetEntry.jsp</result>
+			<result name="success">/WEB-INF/pages/showWorkSheetDetails.jsp</result>
+		</action>
+
+		<action name="EditWorkSheetEntry"
+			class="dbexel.presentation.actions.WorkSheetEntriesAction" method="update">
+			<interceptor-ref name="paramsPrepareParamsStack"/>
+			<result name="input">/WEB-INF/pages/editWorkSheetEntry.jsp</result>
+			<result name="success">/WEB-INF/pages/showWorkSheetDetails.jsp</result>
+		</action>
+
+		<action name="DeleteWorkSheetEntry"
+			class="dbexel.presentation.actions.WorkSheetEntriesAction" method="delete">
+			<interceptor-ref name="paramsPrepareParamsStack"/>
+			<result name="success">/WEB-INF/pages/showWorkSheetDetails.jsp</result>
+		</action>
+		
+		<!-- Attributes -->
+		<action name="ShowDistinctAttribute"
+			class="dbexel.presentation.actions.AttributeAction">
+			<interceptor-ref name="paramsPrepareParamsStack"/>
+			<result name="input">/WEB-INF/pages/showAttributeDetails.jsp</result>
+			<result type="chain" name="success">ShowDistinctWorkSheet</result>
+		</action>
+
+	</package>
+
+</struts>

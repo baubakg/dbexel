@@ -1,0 +1,146 @@
+Release 1.3
+Release Date 25/02/2013
+Source : http://code.google.com/p/dbexel/issues/list
+Filter : http://code.google.com/p/dbexel/issues/list?can=1&q=Milestone%3DRelease1.3+&colspec=ID+Type+Status+Priority+Milestone+Page+Summary&cells=tiles
+
+5	Enhancement	Medium	
+I would like to Check rules on entry
+
+42	Enhancement	Low	
+Let the system propose cell values based on other entries
+
+76	Enhancement	Medium	
+Add description to Attribute
+
+79	Enhancement	Medium	
+I would like to suggest a type for a column
+
+81	Enhancement	High	
+An attribute value for the same attribute should be unique by its value
+
+92	Defect	Medium	
+Ensure the Licensing exists in all page
+
+94	Refactoring	Medium	
+Put page names in an enum
+
+97	Refactoring	Medium	
+remove unused classes and JSP files
+
+101	Enhancement	High	
+Add the type "number"
+
+104	Enhancement	High	
+Allow users to define attribute type at worksheet creation
+
+105	Enhancement	Low	
+Make the choice of keeping a cell as a checkbox instead of a select
+
+106	Enhancement	Low	
+Highlight newly created worksheets
+
+107	Enhancement	High	
+Add validation for number fields
+
+109	Enhancement	Medium	
+Set a worksheet name at the second step of the worksheet creation
+
+111	Refactoring	Medium	
+Refactor test data and add Types to the test data
+
+112	Defect	High	
+The number of error columns do not correspond to the number of columns. 
+
+114	Enhancement	High	
+add type management when adding entries
+
+115	Enhancement	Critical	
+add type management when adding entries
+
+116	Enhancement	Medium	
+Add CSS files for the JSP
+
+118	Enhancement	High	
+I would like to change the type of a an attribute to Number
+
+128	Defect	Critical	
+Error when entering the same name for more than one column
+
+129	Refactoring	Medium	
+Attribute values should be without any intelligence
+
+130	Refactoring		
+Rename WorkSheet_Attribute to Attribute
+
+131	Refactoring		
+Rename WorkSheet_Entry Entry
+
+132	Refactoring		
+Remove references to FreeDB
+
+133	Defect	Critical	
+IndexOutOfBoundsException when making changes to attribute in a one entry worksheet
+
+
+
+Release 1.2
+Release Date 17/02/2013
+Source : http://code.google.com/p/dbexel/issues/list
+Filter : http://code.google.com/p/dbexel/issues/list?can=1&q=Milestone%3DRelease1.2+&colspec=ID+Type+Status+Priority+Milestone+Page+Summary&cells=tiles
+
+8 Enhancement		
+I would like to swap places between columns
+
+9 Enhancement
+I would like to remove an attribute from a WS
+
+29 Enhancement
+Rename an attribute
+
+36 Enhancement
+Get all the distinct values for a given Attribute
+
+65 Enhancement
+Create Attribute directly from attribute value
+
+66 Enhancement
+Given an attribute value I would like to see the entries to which it is attached
+
+68 Enhancement
+Add an attribute value
+
+70 Enhancement
+I would like to be able to add new attribute values whilst adding an entry
+
+73 Enhancement
+An empty worksheet should not show an entry table
+
+75 Enhancement
+I want to have an Attribute dashboard
+
+77 Meta
+Implement link validations for all pages
+
+78 Meta
+add meta data to all pages
+
+82 Enhancement
+We should have unique Attribute Names for a Work Sheet
+
+84 Enhancement
+Attaching attribute values with new attributes to entries should update the link in the worksheet
+
+85 Enhancement
+Whenever we add an entry to a worksheet, we should also add its attributes to the worksheet
+
+86 Enhancement
+Ensure that all jsp pages are UTF-8
+
+87 Improvement
+Remove redundant "deleteWorkSheetEntry.jsp"
+
+90 Bug
+When adding an entry, not filling an attribute value still stores it in the system
+
+91 Bug
+Newly added attribute in new attribute values cannot be set for preexisting entries

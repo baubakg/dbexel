@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+.validationFailure {
+	text-align:center;
+	font-style:italic;
+	color:red;
+}
+.attributeType {
+	text-align:center;
+	font-size:x-small;
+}
+.actionHints {
+	text-align:left;
+	font-style:italic;
+	color:#CC9900;
+}
+.newWorkSheet {
+	font-weight: bold;
+}

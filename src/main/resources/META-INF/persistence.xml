@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	DBEXEL is a Database Backed & Web-Based Worksheet and chart management program. 
+ 	It has been influenced by Excel.
+ 	For questions or suggestions please contact the developper at ( Development@Gandomi.com )
+ 	Copyright (C) 2011 Baubak Gandomi   
+ 
+ 	This file is part of the application DBEXEL
+ 
+ 	DBEXEL is free software: you can redistribute it and/or modify
+ 	it under the terms of the GNU General Public License as published by
+ 	the Free Software Foundation, either version 3 of the License, or
+ 	(at your option) any later version.
+ 
+ 	DBEXEL is distributed in the hope that it will be useful,
+ 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+ 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ 	GNU General Public License for more details.
+ 
+ 	You should have received a copy of the GNU General Public License
+ 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="DBExelPersistenceUnit"
+		transaction-type="RESOURCE_LOCAL">
+		<!--  Postgresql
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:2278:postgres" />
+			<property name="hibernate.connection.username" value="postgres" />
+			<property name="hibernate.connection.password" value="toor"/>
+			<property name="hibernate.default_schema" value="FreeDB"/>
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+		 -->
+		 <properties>
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+<!-- 
+			<property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="hibernate.connection.url" value="jdbc:derby:FreeDB;create=true" />
+			 -->
+			
+			<property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="hibernate.connection.url" value="jdbc:derby://localhost:1527/DBExelDB;create=true" />
+			
+			<property name="hibernate.connection.username" value="user1" />
+			<property name="hibernate.connection.password" value="user1"/>
+			<!-- 
+			<property name="hibernate.default_schema" value="FreeDB"/>
+ -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>

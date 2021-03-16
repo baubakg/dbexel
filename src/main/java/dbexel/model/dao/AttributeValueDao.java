@@ -1,0 +1,48 @@
+/**
+ *  DBEXEL is a Database Backed & Web-Based Worksheet and chart management program. 
+ *  It has been influenced by Excel.
+ *  For questions or suggestions please contact the developper at ( Development@Gandomi.com )
+ *  Copyright (C) 2011 Baubak Gandomi   
+ *
+ *	This file is part of the application DBEXEL
+ *
+ *   DBEXEL is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   DBEXEL is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+package dbexel.model.dao;
+
+import dbexel.model.mapping.AttributeValue;
+
+/**
+ * This is the Dao for the Attribute Values
+ * @author Baubak
+ *
+ */
+
+public interface AttributeValueDao {
+
+	/**
+	 * A DAO for creating attributeValues
+	 * @param in_AttributeValue
+	 */
+	void createAttributeValue(AttributeValue in_AttributeValue);
+
+	/**
+	 * A DAO for deleting attribute values
+	 * @param in_attributeValue
+	 */
+	void deleteAttributeValue(AttributeValue in_attributeValue);
+
+}
